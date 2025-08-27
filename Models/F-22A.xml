@@ -4,16 +4,10 @@
 <nasal>
   <load>
     <!--
-      ##############################################################################
-      # The on-load Nasal is not executed when this file is loaded as the user
-      # aircraft. The code is only executed if the file is loaded for a remote
-      # aircraft in Multi-Player mode (MP)
-      ##############################################################################
-    -->
+
     <![CDATA[
       var livery_update = aircraft.livery_update.new("Aircraft/F-22/Models/Liveries");
 
-	  #this is suppose to go here?
  var rplayer = cmdarg();
    # Set up property aliases for animations.
    rplayer.getNode("orientation/alpha-deg", 1).
@@ -33,26 +27,12 @@
 
 
 
-  <path>Aircraft/F-22/Models/F-22.ac</path>
+  <path>Aircraft/F-22/Models/F-22A.ac</path>
 
  <effect>
         <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
 
-<!-- 
-Dont make these objects metal looking! it crashes flightgear apon loading them in! 
 
-        <object-name>TAIL-L-OUT</object-name>
-        <object-name>TAIL-R-OUT</object-name>
-		
-		I dont know why but i put this here so you remeber for later, not to waste time
-
-		Happy Coding :)
-
-		Oh and these. 	
-		<object-name>Right_Rocket_Bay</object-name>
-		<object-name>Left_Rocket_Bay</object-name>
-		Same reason. dont know
--->
         <object-name>apuflap2</object-name>
         <object-name>apuflap1</object-name>
         <object-name>Fuselage_2</object-name>
@@ -930,12 +910,7 @@ Use below instead
    <z>0</z>
   </axis>
  </animation>
-<!-- this is old
-	<animation>
-		<type>rotate</type>
-		<object-name>Left_Rocket_Bay_D1</object-name>
-		<object-name>Left_Rocket_Bay_D2</object-name>
-		
+	  
 
 
 		<property>sim/multiplay/generic/int[12]</property>
@@ -949,42 +924,7 @@ Use below instead
 				<ind>1.0</ind>
 				<dep>90</dep>
 			</entry>
-		</interpolation>
-		<axis>   
-			<x1-m>-2.2167</x1-m>
-			<y1-m>-0.1791</y1-m>
-			<z1-m>-1.7499</z1-m>
-			<x2-m> 1.4436</x2-m>
-			<y2-m>-0.1792</y2-m>
-			<z2-m>-1.7615</z2-m>
-		</axis>
-	</animation>
-	
-	<animation>
-		<type>rotate</type>
-		<object-name>Right_Rocket_Bay_D1</object-name>
-		<object-name>Right_Rocket_Bay_D2</object-name>
-		<property>sim/multiplay/generic/int[12]</property>
-		<interpolation>
 
-			<entry>
-				<ind>0.0</ind>
-				<dep>0</dep>
-			</entry>
-			<entry>
-				<ind>1.0</ind>
-				<dep>-90</dep>
-			</entry>
-		</interpolation>
-		<axis>   
-			<x1-m>-2.2167</x1-m>
-			<y1-m> 0.1791</y1-m>
-			<z1-m>-1.7499</z1-m>
-			<x2-m> 1.4436</x2-m>
-			<y2-m> 0.1792</y2-m>
-			<z2-m>-1.7615</z2-m>
-		</axis>
-	</animation> -->
 
 
 	<animation>
@@ -1007,7 +947,7 @@ Use below instead
 			</entry>
 		</interpolation>
 		<axis>   
-		<object-name>BAYLEFT-axis</object-name> <!--This works SOOO GOOD!!-->
+		<object-name>BAYLEFT-axis</object-name>
 		</axis>
 	</animation>
 	<animation>
@@ -1030,7 +970,7 @@ Use below instead
 			</entry>
 		</interpolation>
 		<axis>   
-		<object-name>mbaydoor-axis-L</object-name> <!--This works SOOO GOOD!!-->
+		<object-name>mbaydoor-axis-L</object-name> 
 		</axis>
 	</animation>
 
@@ -1075,7 +1015,7 @@ Use below instead
 			</entry>
 		</interpolation>
 		<axis>   
-		<object-name>BAYRIGHT-axis</object-name> <!--This works SOOO GOOD!!-->
+		<object-name>BAYRIGHT-axis</object-name> 
 		</axis>
 	</animation>
 
@@ -1098,7 +1038,7 @@ Use below instead
 			</entry>
 		</interpolation>
 		<axis>   
-		<object-name>baydoor2R</object-name> <!--This works SOOO GOOD!!-->
+		<object-name>baydoor2R</object-name> 
 		</axis>
 	</animation>
 
@@ -1202,7 +1142,7 @@ Use below instead
 			</entry>
 		</interpolation>
 		<axis>   
-		<object-name>9xdl2-axis</object-name> <!--This works SOOO GOOD!!-->
+		<object-name>9xdl2-axis</object-name> 
 		</axis>
 	</animation>
 
@@ -1251,7 +1191,7 @@ Use below instead
 			</entry>
 		</interpolation>
 		<axis>   
-		<object-name>9xdr3-axis</object-name> <!--This works SOOO GOOD!!-->
+		<object-name>9xdr3-axis</object-name> 
 		</axis>
 	</animation>
 
@@ -1482,7 +1422,7 @@ Use below instead
 			</entry>
 		</interpolation>
 		<axis>   
-		<object-name>gundoor-axis</object-name> <!--This works SOOO GOOD!!-->
+		<object-name>gundoor-axis</object-name> 
 		</axis>
 	</animation>
 
@@ -1575,7 +1515,7 @@ Use below instead
 			</entry>
 		</interpolation>
 		<axis>   
-		<object-name>lfd2-axis</object-name> <!--This works SOOO GOOD!!-->
+		<object-name>lfd2-axis</object-name> 
 		</axis>
 	</animation>
 <!--Right-->
@@ -1598,7 +1538,7 @@ Use below instead
 			</entry>
 		</interpolation>
 		<axis>   
-		<object-name>rfd-axis</object-name> <!--This works SOOO GOOD!!-->
+		<object-name>rfd-axis</object-name> 
 		</axis>
 	</animation>
 	<animation>
@@ -1620,7 +1560,7 @@ Use below instead
 			</entry>
 		</interpolation>
 		<axis>   
-		<object-name>rfd2-axis</object-name> <!--This works SOOO GOOD!!-->
+		<object-name>rfd2-axis</object-name> 
 		</axis>
 	</animation>
 <!--
@@ -2189,7 +2129,7 @@ rearwheelsaxis
 
           <center>
             <x-m>-3.66829</x-m>
-            <y-m> 0</y-m>   <!--I still dont know how to get these numbers in AC3d. Snail got these for nose gear turning fyi-->
+            <y-m> 0</y-m>   
             <z-m>0.00083</z-m>
         </center>
 
@@ -2961,32 +2901,6 @@ rearwheelsaxis
     </offsets>
 </model>
 
- <!--
-
-
- landing light todo
-
- 
-   <dist-scale>10</dist-scale>
-   <inner_angle>0.1</inner_angle>
-   <outer_angle>0.4</outer_angle>
-   <zero_angle>0.5</zero_angle>
-   <outer_gain>0.0</outer_gain>
-
- 
-   <attenuation>
-    <c>0.375</c>
-    <l>0.01</l>
-    <q>0.0001</q>
-   </attenuation>
-   <spot-cutoff>60</spot-cutoff>
-   <spot-exponent>45</spot-exponent>
-   <range-m>1500</range-m>
-
- 
- 
- -->
-
 
 <model>
 		<path>Aircraft/F-22/Models/Effects/boom/fx.xml</path>
@@ -3455,7 +3369,7 @@ rearwheelsaxis
 <object-name>9xdr3-axis</object-name>
 <object-name>Right_Back_Turbina</object-name>
 <object-name>Left_Back_Turbina</object-name>
-<object-name>rect</object-name> <!--Odd rectangle-->
+<object-name>rect</object-name> 
   <condition>
 
 			<less-than>
