@@ -11,7 +11,7 @@
             The Lockheed Martin F-22A Raptor is an advanced stealth air superiority fighter featuring supercruise, thrust-vectoring, and cutting-edge avionics for unmatched agility and situational awareness
         </long-description>
 		
-		<author>Yanes Bechir, Pinto, Leto, Octal450, main Model from the FGUK Team, Tyndallteam</author> 
+		<author>Yanes Bechir, Pinto, Leto, Octal450, main Model from the FGUK Team, Morphex</author> 
 		
 		<status>Alpha</status> 
 		
@@ -131,7 +131,7 @@
 		</startup>
 	
 		<model>
-			<path>Aircraft/F-22/Models/F-22-Raptor.xml</path>
+			<path>Aircraft/F-22/Models/F-22A.xml</path>
 	<livery>
 		<name type="string">Aircraft/F-22/Models/Liveries/AK.xml</name>
 	</livery>
